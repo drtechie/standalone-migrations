@@ -10,7 +10,8 @@ require "standalone_migrations/generator"
 require "standalone_migrations/callbacks"
 
 railtie_app_path = "#{lib_path}/standalone_migrations/minimal_railtie_config"
-APP_PATH = File.expand_path(railtie_app_path,  __FILE__)
+# FIXME: This creates issue in existing legecy applications
+# APP_PATH = File.expand_path(railtie_app_path,  __FILE__)
 
 require "standalone_migrations/minimal_railtie_config"
 require "standalone_migrations/tasks"
